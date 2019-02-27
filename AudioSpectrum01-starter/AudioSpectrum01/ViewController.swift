@@ -40,7 +40,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrackCell") as! TrackCell
-        cell.configure(trackName: "\(indexPath.row + 1). \(trackPaths[indexPath.row])", playing: currentPlayingRow == indexPath.row)
+        cell.configure(trackName: "\(trackPaths[indexPath.row])", playing: currentPlayingRow == indexPath.row)
         cell.delegate = self
         return cell
     }
