@@ -28,9 +28,9 @@ class AudioSpectrumPlayer {
         engine.mainMixerNode.installTap(onBus: 0, bufferSize: AVAudioFrameCount(fftSize), format: nil, block: { (buffer, when) in
             if !self.player.isPlaying { return }
             buffer.frameLength = AVAudioFrameCount(self.fftSize)
-            let magnitudes = self.fft(buffer)
+            let amplitudes = self.fft(buffer)
             if self.delegate != nil {
-                self.delegate?.player(self, didGenerateSpectrum: magnitudes)
+                self.delegate?.player(self, didGenerateSpectrum: amplitudes)
             }
         })
         engine.prepare()
