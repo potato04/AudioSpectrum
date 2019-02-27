@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioSpectrum01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJR-3n-a6s">
+                                <rect key="frame" x="0.0" y="20" width="375" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="pBb-fU-mKK"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-1f-hXx">
+                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackCell" id="Bof-CZ-4mZ" customClass="TrackCell" customModule="AudioSpectrum01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bof-CZ-4mZ" id="9Xk-UR-O4I">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrackName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asQ-DT-ofL">
+                                                    <rect key="frame" x="15" y="11.5" width="295" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-nc-K46">
+                                                    <rect key="frame" x="320" y="7" width="40" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="d0n-zP-8vJ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="PLAY"/>
+                                                    <connections>
+                                                        <action selector="playOrStopTapped:" destination="Bof-CZ-4mZ" eventType="touchUpInside" id="pWx-UN-N6R"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SJu-nc-K46" firstAttribute="leading" secondItem="asQ-DT-ofL" secondAttribute="trailing" constant="10" id="1CJ-E3-82s"/>
+                                                <constraint firstItem="SJu-nc-K46" firstAttribute="centerY" secondItem="9Xk-UR-O4I" secondAttribute="centerY" id="3Wq-yy-fOP"/>
+                                                <constraint firstItem="asQ-DT-ofL" firstAttribute="leading" secondItem="9Xk-UR-O4I" secondAttribute="leadingMargin" id="AfG-gl-EMa"/>
+                                                <constraint firstItem="asQ-DT-ofL" firstAttribute="centerY" secondItem="SJu-nc-K46" secondAttribute="centerY" id="nJb-1W-OF2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SJu-nc-K46" secondAttribute="trailing" id="u75-o2-r8e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playOrStopButton" destination="SJu-nc-K46" id="17T-Y1-1cU"/>
+                                            <outlet property="trackNameLabel" destination="asQ-DT-ofL" id="qXz-zP-dCg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DJR-3n-a6s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Jy-YF-JTu"/>
+                            <constraint firstItem="2Jg-1f-hXx" firstAttribute="leading" secondItem="DJR-3n-a6s" secondAttribute="leading" id="55W-mq-lAi"/>
+                            <constraint firstItem="2Jg-1f-hXx" firstAttribute="top" secondItem="DJR-3n-a6s" secondAttribute="bottom" id="9x7-A0-ts6"/>
+                            <constraint firstAttribute="trailing" secondItem="DJR-3n-a6s" secondAttribute="trailing" id="LDe-7n-vUO"/>
+                            <constraint firstItem="2Jg-1f-hXx" firstAttribute="trailing" secondItem="DJR-3n-a6s" secondAttribute="trailing" id="x3Y-0d-BKm"/>
+                            <constraint firstItem="2Jg-1f-hXx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xJa-ZY-KcE"/>
+                            <constraint firstItem="DJR-3n-a6s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zTg-ib-zRD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="trackTableView" destination="2Jg-1f-hXx" id="w2l-xP-PFy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
