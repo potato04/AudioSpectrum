@@ -1,5 +1,6 @@
 # AudioSpectrum
 Audio spectrum using fft in iOS
+
 ![](preview.png)
 
 更多内容请参考博客：  
