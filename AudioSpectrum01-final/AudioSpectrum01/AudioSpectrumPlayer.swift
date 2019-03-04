@@ -92,14 +92,14 @@ class AudioSpectrumPlayer {
             //4：执行FFT
             vDSP_fft_zrip(fftSetup!, &fftInOut, 1, vDSP_Length(round(log2(Double(fftSize)))), FFTDirection(FFT_FORWARD));
             
-            //5：调整FFT结果，计算幅值
+            //5：调整FFT结果，计算振幅
             fftInOut.imagp[0] = 0
             let fftNormFactor = Float(1.0 / (Float(fftSize)))
             vDSP_vsmul(fftInOut.realp, 1, [fftNormFactor], fftInOut.realp, 1, vDSP_Length(fftSize / 2));
             vDSP_vsmul(fftInOut.imagp, 1, [fftNormFactor], fftInOut.imagp, 1, vDSP_Length(fftSize / 2));
             var channelAmplitudes = [Float](repeating: 0.0, count: Int(fftSize / 2))
             vDSP_zvabs(&fftInOut, 1, &channelAmplitudes, 1, vDSP_Length(fftSize / 2));
-            channelAmplitudes[0] = channelAmplitudes[0] / 2 //直流分量的幅值需要再除以2
+            channelAmplitudes[0] = channelAmplitudes[0] / 2 //直流分量的振幅需要再除以2
             amplitudes.append(channelAmplitudes)
         }
         return amplitudes
