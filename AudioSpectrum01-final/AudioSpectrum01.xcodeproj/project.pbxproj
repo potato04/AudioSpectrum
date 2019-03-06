@@ -14,9 +14,9 @@
 		4B87BCEA21D515F900732679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B87BCE921D515F900732679 /* Assets.xcassets */; };
 		4B87BCED21D515F900732679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B87BCEB21D515F900732679 /* LaunchScreen.storyboard */; };
 		4BC64F7621D53B9A00EE2DB7 /* AudioSpectrumPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC64F7521D53B9A00EE2DB7 /* AudioSpectrumPlayer.swift */; };
-		4BF857882226211600166998 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BF857852226211400166998 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 */; };
-		4BF857892226211600166998 /* 03.Spektrum & Sara Skinner - Keep You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BF857862226211500166998 /* 03.Spektrum & Sara Skinner - Keep You.mp3 */; };
-		4BF8578A2226211600166998 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BF857872226211600166998 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 */; };
+		4BE6B35E222FA6990063A925 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BE6B35B222FA6990063A925 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 */; };
+		4BE6B35F222FA6990063A925 /* 03.Spektrum & Sara Skinner - Keep You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BE6B35C222FA6990063A925 /* 03.Spektrum & Sara Skinner - Keep You.mp3 */; };
+		4BE6B360222FA6990063A925 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BE6B35D222FA6990063A925 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		4B87BCEC21D515F900732679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B87BCEE21D515F900732679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC64F7521D53B9A00EE2DB7 /* AudioSpectrumPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrumPlayer.swift; sourceTree = "<group>"; };
-		4BF857852226211400166998 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02.Ellis - Clear My Head (Radio Edit) [NCS].mp3"; sourceTree = "<group>"; };
-		4BF857862226211500166998 /* 03.Spektrum & Sara Skinner - Keep You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03.Spektrum & Sara Skinner - Keep You.mp3"; sourceTree = "<group>"; };
-		4BF857872226211600166998 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3"; sourceTree = "<group>"; };
+		4BE6B35B222FA6990063A925 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3"; sourceTree = "<group>"; };
+		4BE6B35C222FA6990063A925 /* 03.Spektrum & Sara Skinner - Keep You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03.Spektrum & Sara Skinner - Keep You.mp3"; sourceTree = "<group>"; };
+		4BE6B35D222FA6990063A925 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02.Ellis - Clear My Head (Radio Edit) [NCS].mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,16 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B5CA82C21D5226900A8E3F0 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				4BF857872226211600166998 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 */,
-				4BF857852226211400166998 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 */,
-				4BF857862226211500166998 /* 03.Spektrum & Sara Skinner - Keep You.mp3 */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
 		4B87BCD621D515F600732679 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +64,7 @@
 		4B87BCE121D515F600732679 /* AudioSpectrum01 */ = {
 			isa = PBXGroup;
 			children = (
-				4B5CA82C21D5226900A8E3F0 /* Audio */,
+				4BE6B35A222FA6990063A925 /* Audio */,
 				4BC64F7721D53BC700EE2DB7 /* Supporting Files */,
 				4B87BCE421D515F600732679 /* ViewController.swift */,
 				4BC64F7521D53B9A00EE2DB7 /* AudioSpectrumPlayer.swift */,
@@ -93,6 +83,17 @@
 				4B79C11C21FE24350005E365 /* TrackCell.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BE6B35A222FA6990063A925 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4BE6B35B222FA6990063A925 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 */,
+				4BE6B35D222FA6990063A925 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 */,
+				4BE6B35C222FA6990063A925 /* 03.Spektrum & Sara Skinner - Keep You.mp3 */,
+			);
+			name = Audio;
+			path = ../../Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF857892226211600166998 /* 03.Spektrum & Sara Skinner - Keep You.mp3 in Resources */,
-				4BF857882226211600166998 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 in Resources */,
+				4BE6B35F222FA6990063A925 /* 03.Spektrum & Sara Skinner - Keep You.mp3 in Resources */,
+				4BE6B35E222FA6990063A925 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 in Resources */,
 				4B87BCED21D515F900732679 /* LaunchScreen.storyboard in Resources */,
 				4B87BCEA21D515F900732679 /* Assets.xcassets in Resources */,
-				4BF8578A2226211600166998 /* 01.Halcyon - Runaway (Feat. Valentina Franco) (Heuse Remix).mp3 in Resources */,
+				4BE6B360222FA6990063A925 /* 02.Ellis - Clear My Head (Radio Edit) [NCS].mp3 in Resources */,
 				4B87BCE821D515F600732679 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
