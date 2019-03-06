@@ -6,15 +6,14 @@
 
 import UIKit
 
-
-protocol TrackCellDelegate {
+protocol TrackCellDelegate: AnyObject {
     func playTapped(_ cell: TrackCell)
     func stopTapped(_ cell: TrackCell)
 }
 
 class TrackCell: UITableViewCell {
     
-    var delegate: TrackCellDelegate?
+    weak var delegate: TrackCellDelegate?
     @IBOutlet weak var playOrStopButton: UIButton!
     @IBOutlet weak var trackNameLabel: UILabel!
     

@@ -25,12 +25,13 @@ class AudioSpectrumPlayer {
     init() {
         engine.attach(player)
         engine.connect(player, to: engine.mainMixerNode, format: nil)
-        engine.mainMixerNode.installTap(onBus: 0, bufferSize: AVAudioFrameCount(fftSize), format: nil, block: { (buffer, when) in
-            if !self.player.isPlaying { return }
-            buffer.frameLength = AVAudioFrameCount(self.fftSize)
-            let amplitudes = self.fft(buffer)
-            if self.delegate != nil {
-                self.delegate?.player(self, didGenerateSpectrum: amplitudes)
+        engine.mainMixerNode.installTap(onBus: 0, bufferSize: AVAudioFrameCount(fftSize), format: nil, block: { [weak self](buffer, when) in
+            guard let strongSelf = self else { return }
+            if !strongSelf.player.isPlaying { return }
+            buffer.frameLength = AVAudioFrameCount(strongSelf.fftSize)
+            let amplitudes = strongSelf.fft(buffer)
+            if strongSelf.delegate != nil {
+                strongSelf.delegate?.player(strongSelf, didGenerateSpectrum: amplitudes)
             }
         })
         engine.prepare()
