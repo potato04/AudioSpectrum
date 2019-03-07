@@ -1,10 +1,10 @@
 # AudioSpectrum
 
-[![](preview.jpg)](https://www.bilibili.com/video/av44886149)
+[![](preview.jpg)](https://www.bilibili.com/video/av45547872)
 
 更多信息请参考：  
 [一步一步教你实现iOS音频频谱动画（一）](https://juejin.im/post/5c1bbec66fb9a049cb18b64c)  
-一步一步教你实现iOS音频频谱动画（二） 未发布
+[一步一步教你实现iOS音频频谱动画（二）](https://juejin.im/post/5c26d44ae51d45619a4b8b1e)
 
 `AudioSpectrum01`项目是第一篇博客的示例代码，包含音频播放和频谱数据计算
 
